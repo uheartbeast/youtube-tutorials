@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://LaserBeam.tscn" type="PackedScene" id=1]
+[ext_resource path="res://CollisionPolygon2D.gd" type="Script" id=2]
+
+[node name="World" type="Node2D"]
+
+[node name="LaserBeam" parent="." instance=ExtResource( 1 )]
+position = Vector2( 388.92, 332.41 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 160, 0, 96, 128, 256, 160, 96, 320, 288, 352, 224, 448, 448, 512, 480, 576, 640, 416, 768, 608, 896, 544, 928, 320, 704, 320, 704, 160, 896, 96, 1056, 96, 768, -32, 640, 128, 480, 32, 608, -64, 1216, -64, 1184, 640, -64, 640, -64, 0 )
+script = ExtResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D/CollisionPolygon2D"]
