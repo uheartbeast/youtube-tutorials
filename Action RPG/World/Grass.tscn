@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://World/Grass.png" type="Texture" id=1]
+[ext_resource path="res://World/Grass.gd" type="Script" id=2]
+
+[node name="Grass" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -8, -8 )
