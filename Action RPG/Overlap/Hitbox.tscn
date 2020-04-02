@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Hitbox" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
