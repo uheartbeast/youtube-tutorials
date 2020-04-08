@@ -319,7 +319,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=47]
+[sub_resource type="Animation" id=11]
 resource_name = "RollLeft"
 length = 0.5
 tracks/0/type = "value"
@@ -349,7 +349,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=48]
+[sub_resource type="Animation" id=12]
 resource_name = "RollRight"
 length = 0.5
 tracks/0/type = "value"
@@ -379,7 +379,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=49]
+[sub_resource type="Animation" id=13]
 resource_name = "RollUp"
 length = 0.5
 tracks/0/type = "value"
@@ -409,7 +409,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=50]
+[sub_resource type="Animation" id=14]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -425,7 +425,7 @@ tracks/0/keys = {
 "values": [ 19, 20, 21, 22, 23, 18 ]
 }
 
-[sub_resource type="Animation" id=51]
+[sub_resource type="Animation" id=15]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -441,7 +441,7 @@ tracks/0/keys = {
 "values": [ 13, 14, 15, 16, 17, 12 ]
 }
 
-[sub_resource type="Animation" id=52]
+[sub_resource type="Animation" id=16]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -457,7 +457,7 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 5, 0 ]
 }
 
-[sub_resource type="Animation" id=53]
+[sub_resource type="Animation" id=17]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -627,22 +627,22 @@ anims/IdleLeft = SubResource( 7 )
 anims/IdleRight = SubResource( 8 )
 anims/IdleUp = SubResource( 9 )
 anims/RollDown = SubResource( 10 )
-anims/RollLeft = SubResource( 47 )
-anims/RollRight = SubResource( 48 )
-anims/RollUp = SubResource( 49 )
-anims/RunDown = SubResource( 50 )
-anims/RunLeft = SubResource( 51 )
-anims/RunRight = SubResource( 52 )
-anims/RunUp = SubResource( 53 )
+anims/RollLeft = SubResource( 11 )
+anims/RollRight = SubResource( 12 )
+anims/RollUp = SubResource( 13 )
+anims/RunDown = SubResource( 14 )
+anims/RunLeft = SubResource( 15 )
+anims/RunRight = SubResource( 16 )
+anims/RunUp = SubResource( 17 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 44 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 45 )
-parameters/Attack/blend_position = Vector2( 0.020582, -0.0293769 )
-parameters/Idle/blend_position = Vector2( 0, 0 )
-parameters/Roll/blend_position = Vector2( 0, 0.015566 )
-parameters/Run/blend_position = Vector2( 0, 0 )
+parameters/Attack/blend_position = Vector2( 0, 1 )
+parameters/Idle/blend_position = Vector2( 0, 1 )
+parameters/Roll/blend_position = Vector2( 0, 1 )
+parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
