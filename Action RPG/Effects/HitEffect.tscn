@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Effects/HitEffect.png" type="Texture" id=1]
 [ext_resource path="res://Effects/Effect.gd" type="Script" id=2]
+[ext_resource path="res://Music and Sounds/Hit.wav" type="AudioStream" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -24,3 +25,7 @@ frames = SubResource( 3 )
 animation = "Animate"
 offset = Vector2( 0, -8 )
 script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
