@@ -2,10 +2,10 @@ extends KinematicBody2D
 
 const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
 
-export var ACCELERATION = 500
+export var ACCELERATION = 8
 export var MAX_SPEED = 80
 export var ROLL_SPEED = 120
-export var FRICTION = 500
+export var FRICTION = 8
 
 enum {
 	MOVE,
@@ -31,10 +31,10 @@ func _ready():
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	match state:
 		MOVE:
-			move_state(delta)
+			move_state()
 		
 		ROLL:
 			roll_state()
@@ -56,10 +56,10 @@ func move_state(delta):
 		animationTree.set("parameters/Attack/blend_position", input_vector)
 		animationTree.set("parameters/Roll/blend_position", input_vector)
 		animationState.travel("Run")
-		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
+		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION)
 	else:
 		animationState.travel("Idle")
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
+		velocity = velocity.move_toward(Vector2.ZERO, FRICTION)
 	
 	move()
 	
